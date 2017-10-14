@@ -38,14 +38,23 @@ saturation: 32
 sharpness: 22
 
 # Enable camera's autofocus
-autofocus: false
+autofocus: true
 
 # If autofocus is disabled, the focus of the camera (0=at infinity)
 focus: 51
 
+# Enable camera's autoexposure
+autoexposure: true
+
+# If autoexposure is disabled, the exposure of the camera
+exposure: 50
+
+# If autoexposure is disabled, the gain of the camera
+gain: 50
+
 # A url to the camera calibration file that will be read by the
 # CameraInfoManager class
-camera_info_url: ""
+camera_info_url: "file:///home/pi/catkin_ws/src/openag_brain/data/head_camera_cal.yaml"
 
 # The camera name. This must match the name in the camera calibration
 camera_name: "head_camera"
