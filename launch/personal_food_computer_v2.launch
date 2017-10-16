@@ -74,7 +74,6 @@
 
     <!-- image rectification -->
     <node name="image_proc_aerial" pkg="image_proc" type="image_proc" ns="aerial_image"/>
-    <node name="image_proc_frontal" pkg="image_proc" type="image_proc" ns="frontal_image"/>
 
     <!-- Mask Plant Tray (Top view only) -->      
     <node name="MaskPlantTray" pkg="openag_cv" type="MaskPlantTray.py" ns="aerial_image" args="image_rect_color"/>
