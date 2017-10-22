@@ -98,11 +98,15 @@ environment_variables:
     type: "std_msgs/Float64"
 camera_variables:
   aerial_image:
-    name: aerial_image
+    name: aerial_image/image_raw
     description: "Image from above the tray looking down on the plants"
     units: "png"
+  measurement_image:
+    name: aerial_image/image_rect_color/ObjectDetectorAndBlobDetector
+    description: "Measurement of image from above the tray looking down on the plants"
+    units: "png"
   frontal_image:
-    name: frontal_image
+    name: frontal_image/image_raw
     description: "Image from in front of the tray looking towards the plants"
     units: "png"
 user_variables:
