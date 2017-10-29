@@ -283,8 +283,11 @@ def get_topic_data(topic_name):
     if not real_topic:
         return error("Topic does not exist", 404)
 
-    msg = rospy.wait_for_message(real_topic, msg_class)
-
+    try:
+        msg = rospy.wait_for_message(real_topic, msg_class, timeout = 2)
+    except rospy.ROSException:
+        return error("Topic timeout", 404)
+        
     msg_encoding = getattr(msg, "encoding", None)
 
     # Text only, return as json
