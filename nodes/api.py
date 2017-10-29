@@ -296,7 +296,7 @@ def get_topic_data(topic_name):
         "rgba8": "RGBA",
     }
     image_format = image_format_mapping.get(msg_encoding, None)
-    if image_format = None:
+    if image_format is None:
         return error("Unsupported image format", 404)
 
     # Create an image object and convert to png
