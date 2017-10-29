@@ -17,14 +17,9 @@ from roslib.message import get_message_class
 from flask import Flask, jsonify, request, Response
 from gevent.wsgi import WSGIServer
 from gevent.queue import Queue
-
 from rospy_message_converter import json_message_converter
 from PIL import Image
 from StringIO import StringIO
-
-import cv2
-import cv2.cv as cv
-from cv_bridge import CvBridge, CvBridgeError
 
 API_VER = "0.0.1"
 
@@ -301,7 +296,7 @@ def get_topic_data(topic_name):
         "rgba8": "RGBA",
     }
     image_format = image_format_mapping.get(msg_encoding, None)
-    if image_format == None:
+    if image_format = None:
         return error("Unsupported image format", 404)
 
     # Create an image object and convert to png
