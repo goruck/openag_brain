@@ -274,24 +274,36 @@ def get_topic_data(topic_name):
         raise e
     if not real_topic:
         return error("Topic does not exist", 404)
-    msg = rospy.wait_for_message(real_topic, msg_class)
-    data = getattr(msg, "data", None)
-    if data is None:
-        json = '{"status": ['
-        for x in msg.status:
-            if x == msg.status[-1]:
-                json += '{"name": \"%s\", "level": %d, "message": \"%s\", "hardware_id": \"%s\", "values": %s}]}' % \
-                        (x.name if x.name else "null", x.level, \
-                         x.message if x.message else "null", x.hardware_id if x.hardware_id else "null", \
-                         x.values)
-            else:
-                json += '{"name": \"%s\", "level": %d, "message": \"%s\", "hardware_id": \"%s\", "values": %s},' % \
-                        (x.name if x.name else "null", x.level, \
-                         x.message if x.message else "null", x.hardware_id if x.hardware_id else "null", \
-                         x.values)
-        return Response(json, mimetype = 'application/json')
-    else:
-	return jsonify({"result": data})
+
+    try:
+        msg = rospy.wait_for_message(real_topic, msg_class, timeout = 2)
+    except rospy.ROSException:
+        return error("Topic timeout", 404)
+        
+    msg_encoding = getattr(msg, "encoding", None)
+
+    # Text only, return as json
+    if msg_encoding is None:
+        json_str = json_message_converter.convert_ros_message_to_json(msg)
+        return Response(json_str, mimetype = 'application/json')
+
+    # Map format to PIL standard names
+    image_format_mapping = {
+        "rgb8": "RGB",
+        "rgba8": "RGBA",
+    }
+    image_format = image_format_mapping.get(msg_encoding, None)
+    if image_format == None:
+        return error("Unsupported image format", 404)
+
+    # Create an image object and convert to png
+    img = Image.fromstring(
+        image_format, (msg.width, msg.height), msg.data
+    )
+    buf = StringIO()
+    img.save(buf, "PNG")
+    buf.seek(0)
+    return Response(buf, mimetype = 'image/png')
 
 @app.route("/api/{v}/node".format(v=API_VER), methods=["GET"])
 def list_nodes():
