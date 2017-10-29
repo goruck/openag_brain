@@ -72,24 +72,24 @@
     version: genpy-release-release-indigo-genpy-0.5.10-0
 - tar:
     local-name: geometry/tf
-    uri: https://github.com/ros-gbp/geometry-release/archive/release/indigo/tf/1.11.8-0.tar.gz
-    version: geometry-release-release-indigo-tf-1.11.8-0
+    uri: https://github.com/ros-gbp/geometry-release/archive/release/indigo/tf/1.11.9-0.tar.gz
+    version: geometry-release-release-indigo-tf-1.11.9-0
 - tar:
     local-name: geometry2/tf2
-    uri: https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2/0.5.15-0.tar.gz
-    version: geometry2-release-release-indigo-tf2-0.5.15-0
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2/0.5.16-0.tar.gz
+    version: geometry2-release-release-indigo-tf2-0.5.16-0
 - tar:
     local-name: geometry2/tf2_msgs
-    uri: https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2_msgs/0.5.15-0.tar.gz
-    version: geometry2-release-release-indigo-tf2_msgs-0.5.15-0
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2_msgs/0.5.16-0.tar.gz
+    version: geometry2-release-release-indigo-tf2_msgs-0.5.16-0
 - tar:
     local-name: geometry2/tf2_py
-    uri: https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2_py/0.5.15-0.tar.gz
-    version: geometry2-release-release-indigo-tf2_py-0.5.15-0
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2_py/0.5.16-0.tar.gz
+    version: geometry2-release-release-indigo-tf2_py-0.5.16-0
 - tar:
     local-name: geometry2/tf2_ros
-    uri: https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2_ros/0.5.15-0.tar.gz
-    version: geometry2-release-release-indigo-tf2_ros-0.5.15-0
+    uri: https://github.com/ros-gbp/geometry2-release/archive/release/indigo/tf2_ros/0.5.16-0.tar.gz
+    version: geometry2-release-release-indigo-tf2_ros-0.5.16-0
 - tar:
     local-name: image_common/camera_calibration_parsers
     uri: https://github.com/ros-gbp/image_common-release/archive/release/indigo/camera_calibration_parsers/1.11.12-0.tar.gz
@@ -102,6 +102,10 @@
     local-name: image_common/image_transport
     uri: https://github.com/ros-gbp/image_common-release/archive/release/indigo/image_transport/1.11.12-0.tar.gz
     version: image_common-release-release-indigo-image_transport-1.11.12-0
+- tar:
+    local-name: image_pipeline/image_proc
+    uri: https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_proc/1.12.20-0.tar.gz
+    version: image_pipeline-release-release-indigo-image_proc-1.12.20-0
 - tar:
     local-name: image_pipeline/image_view
     uri: https://github.com/ros-gbp/image_pipeline-release/archive/release/indigo/image_view/1.12.20-0.tar.gz
@@ -119,9 +123,25 @@
     uri: https://github.com/ros-gbp/nodelet_core-release/archive/release/indigo/nodelet/1.9.10-0.tar.gz
     version: nodelet_core-release-release-indigo-nodelet-1.9.10-0
 - tar:
+    local-name: nodelet_core/nodelet_topic_tools
+    uri: https://github.com/ros-gbp/nodelet_core-release/archive/release/indigo/nodelet_topic_tools/1.9.10-0.tar.gz
+    version: nodelet_core-release-release-indigo-nodelet_topic_tools-1.9.10-0
+- tar:
     local-name: pluginlib
     uri: https://github.com/ros-gbp/pluginlib-release/archive/release/indigo/pluginlib/1.10.5-0.tar.gz
     version: pluginlib-release-release-indigo-pluginlib-1.10.5-0
+- tar:
+    local-name: python_qt_binding
+    uri: https://github.com/ros-gbp/python_qt_binding-release/archive/release/indigo/python_qt_binding/0.2.19-0.tar.gz
+    version: python_qt_binding-release-release-indigo-python_qt_binding-0.2.19-0
+- tar:
+    local-name: qt_gui_core/qt_gui
+    uri: https://github.com/ros-gbp/qt_gui_core-release/archive/release/indigo/qt_gui/0.2.32-0.tar.gz
+    version: qt_gui_core-release-release-indigo-qt_gui-0.2.32-0
+- tar:
+    local-name: qt_gui_core/qt_gui_cpp
+    uri: https://github.com/ros-gbp/qt_gui_core-release/archive/release/indigo/qt_gui_cpp/0.2.32-0.tar.gz
+    version: qt_gui_core-release-release-indigo-qt_gui_cpp-0.2.32-0
 - tar:
     local-name: ros/mk
     uri: https://github.com/ros-gbp/ros-release/archive/release/indigo/mk/1.11.14-0.tar.gz
@@ -279,6 +299,10 @@
     uri: https://github.com/ros-gbp/rospack-release/archive/release/indigo/rospack/2.2.8-0.tar.gz
     version: rospack-release-release-indigo-rospack-2.2.8-0
 - tar:
+    local-name: rospy_message_converter
+    uri: https://github.com/baalexander/rospy_message_converter-release/archive/release/indigo/rospy_message_converter/0.4.0-0.tar.gz
+    version: rospy_message_converter-release-release-indigo-rospy_message_converter-0.4.0-0
+- tar:
     local-name: rosserial/rosserial
     uri: https://github.com/ros-gbp/rosserial-release/archive/release/indigo/rosserial/0.6.4-0.tar.gz
     version: rosserial-release-release-indigo-rosserial-0.6.4-0
@@ -299,6 +323,18 @@
     uri: https://github.com/ros-gbp/rosserial-release/archive/release/indigo/rosserial_python/0.6.4-0.tar.gz
     version: rosserial-release-release-indigo-rosserial_python-0.6.4-0
 - tar:
+    local-name: rqt/rqt_gui
+    uri: https://github.com/ros-gbp/rqt-release/archive/release/indigo/rqt_gui/0.4.8-0.tar.gz
+    version: rqt-release-release-indigo-rqt_gui-0.4.8-0
+- tar:
+    local-name: rqt/rqt_gui_cpp
+    uri: https://github.com/ros-gbp/rqt-release/archive/release/indigo/rqt_gui_cpp/0.4.8-0.tar.gz
+    version: rqt-release-release-indigo-rqt_gui_cpp-0.4.8-0
+- tar:
+    local-name: rqt_image_view
+    uri: https://github.com/ros-gbp/rqt_image_view-release/archive/release/indigo/rqt_image_view/0.4.9-0.tar.gz
+    version: rqt_image_view-release-release-indigo-rqt_image_view-0.4.9-0
+- tar:
     local-name: std_msgs
     uri: https://github.com/ros-gbp/std_msgs-release/archive/release/indigo/std_msgs/0.5.10-0.tar.gz
     version: std_msgs-release-release-indigo-std_msgs-0.5.10-0
@@ -310,4 +346,8 @@
     local-name: vision_opencv/cv_bridge
     uri: https://github.com/ros-gbp/vision_opencv-release/archive/release/indigo/cv_bridge/1.11.15-0.tar.gz
     version: vision_opencv-release-release-indigo-cv_bridge-1.11.15-0
+- tar:
+    local-name: vision_opencv/image_geometry
+    uri: https://github.com/ros-gbp/vision_opencv-release/archive/release/indigo/image_geometry/1.11.15-0.tar.gz
+    version: vision_opencv-release-release-indigo-image_geometry-1.11.15-0
 
